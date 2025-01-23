@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 const titilliumWeb = Titillium_Web({
   variable: "--font-titillium-web",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["200", "300", "400", "600", "700", "900"],
 });
 
 export const metadata: Metadata = {
