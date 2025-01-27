@@ -14,16 +14,16 @@ const ResaBtn = () => {
     <>
       <button
         onClick={openModal}
-        className="w-[180px] h-[45px] px-2 py-1 bg-rose rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] justify-center items-center gap-2 inline-flex"
+        className="w-[180px] h-[45px] px-2 py-1 bg-rose rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] flex justify-center items-center gap-2"
       >
-        <MdOutlineTableBar className="w-8 h-8 px-0.5 justify-center items-center flex" />
+        <MdOutlineTableBar className="w-8 h-8 px-0.5 flex justify-center items-center" />
         <div className="text-center text-beige text-2xl font-black font-titillium">
           RÉSERVER
         </div>
       </button>
 
       <Modal
-        className="h-3/4 bg-rose"
+        className="!bg-rose"
         isOpen={isModalOpen}
         onClose={closeModal}
       >
@@ -33,7 +33,7 @@ const ResaBtn = () => {
         <p className="mb-4 text-center pb-4 border-b border-white border-opacity-30">
           Nous prenons les réservations intégralement par téléphone. <br />
           Il vous suffit de nous appeler au moins 24h avant la date de
-          réservation souhaitée, durant nos horaires d’ouverture
+          réservation souhaitée, durant nos horaires d&apos;ouverture
         </p>
         <div>
           <h3 className="text-xl font-semibold">Horaires d&apos;ouverture:</h3>
@@ -68,12 +68,15 @@ const ResaBtn = () => {
             </li>
           </ul>
           <div className="w-full mt-4 flex justify-center">
-            <div className="w-[159px] h-[45px] px-3 py-1 bg-rose rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] justify-center items-center gap-2 inline-flex overflow-hidden">
-              <HiOutlinePhone className="w-8 h-8 p-[2.25px] justify-center items-center flex" />
-              <div className="grow shrink basis-0 text-center text-white text-2xl font-semibold font-['Titillium Web']">
+            <button
+              onClick={() => window.open("tel:+33388326644")}
+              className="w-[159px] h-[45px] px-3 py-1 bg-rose rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] flex justify-center items-center gap-2 overflow-hidden hover:bg-rose-dark transition"
+            >
+              <HiOutlinePhone className="w-8 h-8 p-[2.25px] flex justify-center items-center" />
+              <div className="grow shrink basis-0 text-center text-white text-2xl font-semibold font-titillium">
                 Réserver
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </Modal>
