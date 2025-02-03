@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import { MdOutlineTableBar } from "react-icons/md";
 import { HiOutlinePhone } from "react-icons/hi";
+import DefaultBtn from "./DefaultBtn";
 
 const ResaBtn = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,21 +13,15 @@ const ResaBtn = () => {
 
   return (
     <>
-      <button
-        onClick={openModal}
-        className="w-[180px] h-[45px] px-2 py-1 bg-rose rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] flex justify-center items-center gap-2"
-      >
-        <MdOutlineTableBar className="w-8 h-8 px-0.5 flex justify-center items-center" />
-        <div className="text-center text-beige text-2xl font-black font-titillium">
-          RÉSERVER
-        </div>
-      </button>
+      <DefaultBtn
+        onClickEvent={openModal}
+        text="Reserver"
+        icon={
+          <MdOutlineTableBar className="w-8 h-8 px-0.5 flex justify-center items-center" />
+        }
+      />
 
-      <Modal
-        className="!bg-rose"
-        isOpen={isModalOpen}
-        onClose={closeModal}
-      >
+      <Modal className="!bg-rose" isOpen={isModalOpen} onClose={closeModal}>
         <h2 className="text-2xl font-semibold font-titillium mb-4 border-b pb-2">
           Comment réserver une table ?
         </h2>
@@ -68,15 +63,15 @@ const ResaBtn = () => {
             </li>
           </ul>
           <div className="w-full mt-4 flex justify-center">
-            <button
-              onClick={() => window.open("tel:+33388326644")}
-              className="w-[159px] h-[45px] px-3 py-1 bg-rose rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] flex justify-center items-center gap-2 overflow-hidden hover:bg-rose-dark transition"
-            >
-              <HiOutlinePhone className="w-8 h-8 p-[2.25px] flex justify-center items-center" />
-              <div className="grow shrink basis-0 text-center text-white text-2xl font-semibold font-titillium">
-                Réserver
-              </div>
-            </button>
+            <DefaultBtn
+              onClickEvent={() => window.open("tel:+33388326644")}
+              text="Réserver"
+              icon={
+                <HiOutlinePhone className="w-8 h-8 p-[2.25px] flex justify-center items-center" />
+              }
+              className="w-[159px] overflow-hidden"
+              textStyles="font-semibold"
+            />
           </div>
         </div>
       </Modal>
