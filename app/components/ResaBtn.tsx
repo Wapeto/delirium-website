@@ -15,7 +15,7 @@ const ResaBtn = () => {
     <>
       <DefaultBtn
         onClickEvent={openModal}
-        text="Reserver"
+        text="RÉSERVER"
         icon={
           <MdOutlineTableBar className="w-8 h-8 px-0.5 flex justify-center items-center" />
         }
