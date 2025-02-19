@@ -1,5 +1,5 @@
 import CarteBtn from "./components/CarteBtn";
-import Planning from "./components/Planning";
+import PlanningServer from "./components/PlanningServer";
 import ResaBtn from "./components/ResaBtn";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <CarteBtn />
         <ResaBtn />
       </div>
-      <Planning />
+      <PlanningServer />
     </main>
   );
 }

@@ -2,40 +2,29 @@ import React from "react";
 import { RiArrowDownDoubleLine } from "react-icons/ri";
 import MotionIcon from "./MotionIcon";
 import DJCard from "./DJCard";
+import path from 'path';
+import fs from 'fs/promises';
 
-const Planning = () => {
-  const planningData = [
-    {
-      date: "ven 1 oct",
-      description: "Set généraliste",
-      name: "DJ Kévin",
-      time: "23h-3h30",
-    },
-    {
-      date: "sam 2 oct",
-      description: "Set généraliste",
-      name: "DJ Sam",
-      time: "23h-3h30",
-    },
-    {
-      date: "dim 3 oct",
-      description: "Soirée Latino",
-      name: "DJ Boule",
-      time: "23h-1h30",
-    },
-    {
-      date: "lun 4 oct",
-      description: "Lundi sensuel",
-      name: "DJ Sensuuuuu",
-      time: "20h-1h",
-    },
-    {
-      date: "lun 4 oct",
-      description: "Lundi sensuel",
-      name: "DJ Sensuuuuu",
-      time: "20h-1h",
-    },
-  ];
+// This async component fetches data server-side
+async function PlanningServer() {
+  // Server-side data fetching
+  const getPlanningData = async () => {
+    try {
+      const filePath = path.join(process.cwd(), 'data', 'planning.json');
+      const jsonData = await fs.readFile(filePath, 'utf8');
+      return JSON.parse(jsonData);
+    } catch (error) {
+      console.error('Error loading planning data:', error);
+      return [];
+    }
+  };
+
+  const planningData = await getPlanningData();
+  
+  if (!planningData.length) {
+    return <div className="text-beige text-xl text-center">No planning data available</div>;
+  }
+
   return (
     <div className="mt-12 flex flex-col items-center gap-4">
       <MotionIcon
@@ -46,7 +35,7 @@ const Planning = () => {
       />
       <h2 className="text-beige text-4xl font-black mb-4">PLANNING</h2>
       <ul className="flex flex-col gap-6">
-        {planningData.map((data, index) => (
+        {planningData.map((data: { date: string; time: string; name: string; description: string; }, index: number) => (
           <DJCard
             key={index}
             date={data.date}
@@ -60,6 +49,6 @@ const Planning = () => {
       </ul>
     </div>
   );
-};
+}
 
-export default Planning;
+export default PlanningServer;
