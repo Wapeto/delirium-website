@@ -26,7 +26,13 @@ const Planning = () => {
     {
       date: "lun 4 oct",
       description: "Lundi sensuel",
-      name: "DJ Sensuuu",
+      name: "DJ Sensuuuuu",
+      time: "20h-1h",
+    },
+    {
+      date: "lun 4 oct",
+      description: "Lundi sensuel",
+      name: "DJ Sensuuuuu",
       time: "20h-1h",
     },
   ];
@@ -38,8 +44,8 @@ const Planning = () => {
         }
         whileHover={{ scale: 1.1, transform: "translate(0, 5px)" }}
       />
-      <h2 className="text-beige text-4xl font-black">PLANNING</h2>
-      <ul className="flex flex-col gap-4">
+      <h2 className="text-beige text-4xl font-black mb-4">PLANNING</h2>
+      <ul className="flex flex-col gap-6">
         {planningData.map((data, index) => (
           <DJCard
             key={index}
@@ -47,6 +53,8 @@ const Planning = () => {
             time={data.time}
             name={data.name}
             description={data.description}
+            index={index}
+            totalCards={planningData.length}
           />
         ))}
       </ul>
