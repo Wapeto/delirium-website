@@ -92,6 +92,8 @@ const Modal: React.FC<ModalProps> = ({
     }
   };
 
+  if (typeof document === "undefined") return null;
+
   return createPortal(
     <FocusTrap>
       <AnimatePresence>
