@@ -8,28 +8,34 @@ const HeaderMobile = () => {
   return (
     <>
       <header
-        className={`${styles.headerMobile} w-screen flex flex-col items-center justify-center text-center headerMobile`}
+        className={`${styles.headerMobile} mb-3 w-screen flex flex-col items-center justify-center text-center rounded-b-[9rem]`}
       >
         <p className="text-3xl mt-10">
           RESTEZ À JOUR <br /> GRÂCE À NOS
         </p>
-        <h2 className="mt-1 mb-1 text-4xl font-black font-titillium">
+        <h2
+          className={`${styles.h2Stroke} mt-1 mb-1 text-4xl font-black font-titillium`}
+        >
           RÉSEAUX SOCIAUX
         </h2>
-        <div className="social flex flex-row justify-center text-4xl">
+        <div
+          className={`${styles.social} flex flex-row justify-center text-6xl relative`}
+        >
           <Link
             href="https://www.facebook.com/"
             target="_blank"
             rel="noreferrer"
           >
-            <CiFacebook />
+            <CiFacebook className={`${styles.iconOutline} absolute`} />
+            <CiFacebook className={styles.iconMain} />
           </Link>
           <Link
             href="https://www.instagram.com/"
             target="_blank"
             rel="noreferrer"
           >
-            <PiInstagramLogo />
+            <PiInstagramLogo className={`${styles.iconOutline} absolute`} />
+            <PiInstagramLogo className={styles.iconMain} />
           </Link>
         </div>
       </header>

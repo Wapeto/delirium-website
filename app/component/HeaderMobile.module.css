@@ -1,4 +1,30 @@
 .headerMobile{
     background-color: #FCEFEF;
   }
-  
+
+.h2Stroke{ /* Couleur du texte */
+  text-shadow: 
+  -1px -1px 0 #F193A2,  
+   1px -1px 0 #F193A2,
+  -1px  1px 0 #F193A2,
+   1px  1px 0 #F193A2;
+}
+
+
+.social .iconOutline {
+  stroke: black;
+  fill: black;
+  stroke-width: 1.5%;
+  position: absolute;
+  z-index: 0; /* Derrière l'icône principale */
+}
+
+.social .iconMain {
+  stroke: #F193A2;
+  stroke-width: 9%;
+  z-index: 1; /* Devant l'icône principale */
+}
+
+.social a{
+  margin: 0 20% 8% 20%;
+}
