@@ -1,12 +1,15 @@
 import HeaderMobile from "./component/HeaderMobile";
 
+import CarteBtn from "./components/CarteBtn";
+import ResaBtn from "./components/ResaBtn";
+
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-screen">
-      <HeaderMobile />
-      <h1 className="text-3xl font-bold">
-        Welcome to the new Délirium Café Strasbourg&apos;s website
-      </h1>
+    <main className="flex flex-col items-center justify-center min-h-screen py-2 bg-background">
+      <div className="flex flex-col  gap-4">
+        <CarteBtn />
+        <ResaBtn />
+      </div>
     </main>
   );
 }
