@@ -26,6 +26,7 @@ export default {
         titillium: ["var(--font-titillium-web)", "sans-serif"],
         geistSans: ["var(--font-geist-sans)", "sans-serif"],
         geistMono: ["var(--font-geist-mono)", "monospace"],
+        spaceGrotesk: ["var(--font-space-grotesk)", "sans-serif"],
       },
     },
   },

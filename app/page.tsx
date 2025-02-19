@@ -1,13 +1,15 @@
 import CarteBtn from "./components/CarteBtn";
+import PlanningServer from "./components/PlanningServer";
 import ResaBtn from "./components/ResaBtn";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen py-2 bg-background">
-      <div className="flex flex-col  gap-4">
+      <div className="flex flex-col gap-4">
         <CarteBtn />
         <ResaBtn />
       </div>
+      <PlanningServer />
     </main>
   );
 }

@@ -1,0 +1,44 @@
+[
+  {
+    "date": "ven 1 oct",
+    "description": "Set généraliste",
+    "name": "DJ Kévin",
+    "time": "23h-3h30"
+  },
+  {
+    "date": "sam 2 oct",
+    "description": "Set généraliste",
+    "name": "DJ Sam",
+    "time": "23h-3h30"
+  },
+  {
+    "date": "dim 3 oct",
+    "description": "Soirée Latino",
+    "name": "DJ Boule",
+    "time": "23h-1h30"
+  },
+  {
+    "date": "lun 4 oct",
+    "description": "Lundi sensuel",
+    "name": "DJ Sensuuuuu",
+    "time": "20h-1h"
+  },
+  {
+    "date": "dim 3 oct",
+    "description": "Soirée Latino",
+    "name": "DJ Boule",
+    "time": "23h-1h30"
+  },
+  {
+    "date": "lun 4 oct",
+    "description": "Lundi sensuel",
+    "name": "DJ Sensuuuuu",
+    "time": "20h-1h"
+  },
+  {
+    "date": "lun 4 oct",
+    "description": "Lundi sensuel",
+    "name": "DJ Sensuuuuu",
+    "time": "20h-1h"
+  }
+]
