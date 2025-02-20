@@ -1,0 +1,9 @@
+
+
+.h2Stroke{ /* Couleur du texte */
+text-shadow: 
+-1px -1px 0 #F193A2,  
+ 1px -1px 0 #F193A2,
+-1px  1px 0 #F193A2,
+ 1px  1px 0 #F193A2;
+}
