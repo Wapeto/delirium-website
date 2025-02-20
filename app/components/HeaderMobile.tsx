@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import IconInstagram from "./IconInstagram";
 import IconFacebook from "./IconFacebook";
-import styles from "./HeaderMobile.module.css";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 const HeaderMobile = () => {
@@ -27,7 +26,7 @@ const HeaderMobile = () => {
 
   useEffect(() => {
     // Écoute les changements de textOpacity
-    const unsubscribe = textOpacity.onChange((value) => {
+    const unsubscribe = textOpacity.on("change", (value) => {
       setIsAbsolute(value < 0.5);
     });
 
@@ -52,7 +51,11 @@ const HeaderMobile = () => {
             RESTEZ À JOUR <br /> GRÂCE À NOS
           </p>
           <h2
-            className={`${styles.h2Stroke} mt-1 mb-1 text-4xl font-black font-titillium`}
+            className="mt-1 mb-1 text-4xl font-black font-titillium h2Stroke"
+            style={{
+              textShadow:
+                "-1px -1px 0 #F193A2, 1px -1px 0 #F193A2, -1px 1px 0 #F193A2, 1px 1px 0 #F193A2",
+            }}
           >
             RÉSEAUX SOCIAUX
           </h2>
@@ -64,8 +67,18 @@ const HeaderMobile = () => {
           }`}
           style={{ scale: socialScale }}
         >
-          <IconFacebook href="https://www.facebook.com/" />
-          <IconInstagram href="https://www.instagram.com" />
+          <IconFacebook
+            href="https://www.facebook.com/"
+            stroke={true}
+            size="1.5"
+            sizeStroke="9"
+          />
+          <IconInstagram
+            href="https://www.instagram.com"
+            stroke={true}
+            size="1.5"
+            sizeStroke="9"
+          />
         </motion.div>
       </motion.header>
 

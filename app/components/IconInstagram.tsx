@@ -5,12 +5,36 @@ import styles from "./Icon.module.css";
 
 interface IconInstagramProps {
   href: string;
+  stroke: boolean;
+  sizeStroke: string;
+  size: string;
 }
-const IconInstagram: React.FC<IconInstagramProps> = ({ href }) => {
+const IconInstagram: React.FC<IconInstagramProps> = ({
+  href,
+  stroke,
+  sizeStroke,
+  size,
+}) => {
   return (
-    <Link href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-      <PiInstagramLogo className={`${styles.iconOutline} absolute`} />
-      <PiInstagramLogo className={styles.iconMain} />
+    <Link href={href} target="_blank" rel="noreferrer">
+      {stroke ? (
+        <PiInstagramLogo
+          className={`absolute`}
+          style={{
+            stroke: "#F193A2",
+            fill: "#F193A2",
+            strokeWidth: `${sizeStroke}%`,
+            zIndex: -5,
+          }}
+        />
+      ) : null}
+      <PiInstagramLogo
+        style={{
+          stroke: "black",
+          strokeWidth: `${size}%`,
+          zIndex: 1,
+        }}
+      />
     </Link>
   );
 };
