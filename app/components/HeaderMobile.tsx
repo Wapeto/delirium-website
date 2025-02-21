@@ -68,13 +68,13 @@ const HeaderMobile = () => {
           style={{ scale: socialScale }}
         >
           <IconFacebook
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/deliriumstrasbourg/"
             stroke={true}
             size="1.5"
             sizeStroke="9"
           />
           <IconInstagram
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/deliriumcafestrasbourg/"
             stroke={true}
             size="1.5"
             sizeStroke="9"
