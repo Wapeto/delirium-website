@@ -1,36 +1,45 @@
 "use client";
 
+import { motion, useTransform, useScroll } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import IconInstagram from "./IconInstagram";
 import IconFacebook from "./IconFacebook";
-import { motion, useTransform, useScroll } from "framer-motion";
 
 const HeaderMobile = () => {
   const { scrollY } = useScroll();
   const threshold = 300; // Distance de scroll pour l'animation complète
 
-  // Transformations basées sur le scroll
+  // Animation du header, du texte et des icônes
   const headerHeight = useTransform(scrollY, [0, threshold], ["14rem", "4rem"]);
   const textOpacity = useTransform(scrollY, [0, threshold * 0.7], [1, 0]);
   const socialScale = useTransform(scrollY, [0, threshold], [1, 0.8]);
-  const socialPosition = useTransform(
-    scrollY,
-    [0, threshold],
-    ["50%", "calc(100% - 4rem)"]
-  );
   const borderRadius = useTransform(scrollY, [0, threshold], ["9rem", "2rem"]);
 
-  // État pour suivre la classe "absolute"
+  // Définition de l'opacité du logo : il apparaît quand le texte a disparu
+  const logoOpacity = useTransform(
+    scrollY,
+    [threshold * 0.7, threshold],
+    [0, 1]
+  );
+
+  // Définition de l'opacité des icônes :
+  // Elles disparaissent au même rythme que le texte (de 1 à 0 entre 0 et 210)
+  // et réapparaissent au même rythme que le logo (de 0 à 1 entre 210 et 300)
+  const iconsOpacity = useTransform(
+    scrollY,
+    [0, threshold * 0.7, threshold],
+    [1, 0, 1]
+  );
+
+  // État pour suivre la classe "absolute" pour les icônes sociales
   const [isAbsolute, setIsAbsolute] = useState(false);
 
   useEffect(() => {
-    // Écoute les changements de textOpacity
     const unsubscribe = textOpacity.on("change", (value) => {
       setIsAbsolute(value < 0.5);
     });
-
-    return () => unsubscribe(); // Nettoyage lors du démontage
+    return () => unsubscribe();
   }, [textOpacity]);
 
   return (
@@ -43,6 +52,16 @@ const HeaderMobile = () => {
           borderBottomRightRadius: borderRadius,
         }}
       >
+        {/* Logo animé : son opacité passe de 0 à 1 quand le header se réduit */}
+        <motion.div
+          className="w-52 absolute top-1 left-3"
+          style={{ opacity: logoOpacity }}
+        >
+          <Link href={"#"}>
+            <img src="./img/Logo-deli-texte-sombre.png" alt="Logo" />
+          </Link>
+        </motion.div>
+
         <motion.div
           className="flex flex-col items-center"
           style={{ opacity: textOpacity }}
@@ -65,7 +84,7 @@ const HeaderMobile = () => {
           className={`flex space-x-8 text-5xl ${
             isAbsolute ? "absolute right-0" : ""
           }`}
-          style={{ scale: socialScale }}
+          style={{ opacity: iconsOpacity, scale: socialScale }}
         >
           <IconFacebook
             href="https://www.facebook.com/deliriumstrasbourg/"
@@ -82,7 +101,7 @@ const HeaderMobile = () => {
         </motion.div>
       </motion.header>
 
-      {/* Espacement pour compenser le header fixed */}
+      {/* Espacement pour compenser le header fixe */}
       <motion.div style={{ height: headerHeight }} />
     </>
   );
