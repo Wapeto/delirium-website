@@ -1,5 +1,6 @@
 import HeaderMobile from "./components/HeaderMobile";
 import CarteBtn from "./components/CarteBtn";
+import PlanningServer from "./components/PlanningServer";
 import ResaBtn from "./components/ResaBtn";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <CarteBtn />
         <ResaBtn />
       </div>
+      <PlanningServer />
     </main>
   );
 }
