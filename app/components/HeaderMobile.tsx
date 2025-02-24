@@ -2,6 +2,7 @@
 
 import { motion, useTransform, useScroll } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import IconInstagram from "./IconInstagram";
 import IconFacebook from "./IconFacebook";
@@ -45,7 +46,7 @@ const HeaderMobile = () => {
   return (
     <>
       <motion.header
-        className="bg-[#FCEFEF] mb-3 w-screen flex flex-col items-center justify-center text-center rounded-b-[9rem] fixed top-0 z-50 left-0 overflow-hidden text-[#171717]"
+        className="bg-beige mb-3 w-screen flex flex-col items-center justify-center text-center rounded-b-[9rem] fixed top-0 z-50 left-0 overflow-hidden text-background"
         style={{
           height: headerHeight,
           borderBottomLeftRadius: borderRadius,
@@ -54,11 +55,11 @@ const HeaderMobile = () => {
       >
         {/* Logo animé : son opacité passe de 0 à 1 quand le header se réduit */}
         <motion.div
-          className="w-52 absolute top-1 left-3"
+          className="absolute top-1 left-3"
           style={{ opacity: logoOpacity }}
         >
           <Link href={"#"}>
-            <img src="./img/Logo-deli-texte-sombre.png" alt="Logo" />
+            <Image src="/img/Logo-deli-texte-sombre.png" alt="Logo" width={208} height={1}/>
           </Link>
         </motion.div>
 
