@@ -45,7 +45,7 @@ const HeaderMobile = () => {
   return (
     <>
       <motion.header
-        className="bg-[#FCEFEF] mb-3 w-screen flex flex-col items-center justify-center text-center rounded-b-[9rem] fixed top-0 z-50 left-0 overflow-hidden text-[#171717]"
+        className="bg-beige mb-3 w-screen flex flex-col items-center justify-center text-center rounded-b-[9rem] fixed top-0 z-50 left-0 overflow-hidden text-background"
         style={{
           height: headerHeight,
           borderBottomLeftRadius: borderRadius,
