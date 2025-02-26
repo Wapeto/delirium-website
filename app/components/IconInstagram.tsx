@@ -30,7 +30,7 @@ const IconInstagram: React.FC<IconInstagramProps> = ({
       <PiInstagramLogo
         style={{
           stroke: "black",
-          strokeWidth: `${size}%`,
+          strokeWidth: `${size}`,
           zIndex: 1,
         }}
       />
