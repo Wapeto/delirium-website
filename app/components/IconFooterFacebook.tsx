@@ -3,7 +3,7 @@ interface IconFacebookFooterProps extends React.SVGProps<SVGSVGElement> {}
 
 const IconFacebookFooter: React.FC<IconFacebookFooterProps> = (props) => (
   <svg
-    stroke="black"
+    stroke="#444343"
     fill="none"
     strokeWidth={1}
     viewBox="0 0 24 24"
