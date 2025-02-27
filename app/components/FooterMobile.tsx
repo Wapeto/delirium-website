@@ -1,10 +1,8 @@
-import React from "react";
 import Link from "next/link";
-import IconFooterFacebook from "./IconFooterFacebook";
-import { PiInstagramLogo } from "react-icons/pi";
-import { PiPhoneThin } from "react-icons/pi";
-import IconFooterMail from "./IconFooterMail";
 import { HiOutlineMapPin } from "react-icons/hi2";
+import { PiInstagramLogo, PiPhoneThin } from "react-icons/pi";
+import { BsEnvelope } from "react-icons/bs";
+import IconFooterFacebook from "./Icons/IconFooterFacebook";
 
 const FooterMobile = () => {
   return (
@@ -41,7 +39,7 @@ const FooterMobile = () => {
           href="mailto:oe@gmail.com"
           className="border border-[#444343] rounded-lg p-2 m-auto"
         >
-          <IconFooterMail style={{ fill: "#444343" }} />
+          <BsEnvelope className="text-[#444343]"/>
         </Link>
       </address>
       <Link

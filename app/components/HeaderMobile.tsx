@@ -1,11 +1,11 @@
 "use client";
 
-import { motion, useTransform, useScroll } from "framer-motion";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import IconInstagram from "./IconInstagram";
-import IconFacebook from "./IconFacebook";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import IconFacebook from "./Icons/IconFacebook";
+import IconInstagram from "./Icons/IconInstagram";
 
 const HeaderMobile = () => {
   const { scrollY } = useScroll();

@@ -1,7 +1,6 @@
 import * as React from "react";
-interface IconFacebookFooterProps extends React.SVGProps<SVGSVGElement> {}
 
-const IconFacebookFooter: React.FC<IconFacebookFooterProps> = (props) => (
+const IconFacebookFooter = () => (
   <svg
     stroke="#444343"
     fill="none"
@@ -10,7 +9,6 @@ const IconFacebookFooter: React.FC<IconFacebookFooterProps> = (props) => (
     height="1em"
     width="1em"
     xmlns="http://www.w3.org/2000/svg"
-    {...props}
   >
     <path
       fillRule="evenodd"
