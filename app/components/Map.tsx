@@ -4,7 +4,7 @@ import Script from "next/script";
 import DefaultBtn from "./DefaultBtn";
 import { IoIosPin } from "react-icons/io";
 
-const MyMap: FC = () => {
+const Map: FC = () => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   const lat = 48.584693908691406;
@@ -19,19 +19,19 @@ const MyMap: FC = () => {
         async
       />
 
-      <div className="flex flex-col items-center h-auto w-full bg-beige mt-16 shadow-[inset_0px_12px_14px_0px_rgba(0,0,0,0.30)] py-10">
+      <div className="flex flex-col items-center h-auto w-full bg-beige mt-16 shadow-[inset_0_12px_14px_-9px_rgba(0,0,0,0.9)] py-10">
         {/* Container with map */}
         <div className="w-72 h-72 rounded overflow-hidden shadow-[0px_6px_8px_3px_rgba(0,0,0,0.25)]">
           <gmp-map
-            center={`${lat},${lng}`}
-            zoom="16"
-            map-id="DELIRIUM_MAP_ID"
-            class="w-full h-full"
+        center={`${lat},${lng}`}
+        zoom="16"
+        map-id="DELIRIUM_MAP_ID"
+        class="w-full h-full"
           >
-            <gmp-advanced-marker
-              position={`${lat},${lng}`}
-              title="My location"
-            ></gmp-advanced-marker>
+        <gmp-advanced-marker
+          position={`${lat},${lng}`}
+          title="My location"
+        ></gmp-advanced-marker>
           </gmp-map>
         </div>
 
@@ -47,4 +47,4 @@ const MyMap: FC = () => {
   );
 };
 
-export default MyMap;
+export default Map;
