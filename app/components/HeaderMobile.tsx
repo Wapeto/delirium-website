@@ -89,13 +89,13 @@ const HeaderMobile = () => {
           <IconFacebook
             href="https://www.facebook.com/deliriumstrasbourg/"
             stroke={true}
-            size="1.5"
+            size="1.5%"
             sizeStroke="9"
           />
           <IconInstagram
             href="https://www.instagram.com/deliriumcafestrasbourg/"
             stroke={true}
-            size="1.5"
+            size="1.5%"
             sizeStroke="9"
           />
         </motion.div>
