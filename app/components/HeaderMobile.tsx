@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import IconInstagram from "./IconInstagram";
 import IconFacebook from "./IconFacebook";
+import Image from "next/image";
 
 const HeaderMobile = () => {
   const { scrollY } = useScroll();
@@ -58,7 +59,12 @@ const HeaderMobile = () => {
           style={{ opacity: logoOpacity }}
         >
           <Link href={"#"}>
-            <img src="./img/Logo-deli-texte-sombre.png" alt="Logo" />
+            <Image
+              src="/img/Logo-deli-texte-sombre.png"
+              alt="Logo"
+              width={208}
+              height={208}
+            />
           </Link>
         </motion.div>
 
