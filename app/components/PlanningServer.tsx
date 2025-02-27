@@ -29,7 +29,7 @@ async function PlanningServer() {
   }
 
   return (
-    <div className="mt-12 flex flex-col items-center gap-4">
+    <div className="mt-8 flex flex-col items-center gap-4">
       <MotionIcon
         icon={
           <RiArrowDownDoubleLine className="w-16 h-16 px-0.5 flex justify-center items-center" />
