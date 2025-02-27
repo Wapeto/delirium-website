@@ -30,7 +30,7 @@ const IconFacebook: React.FC<IconFacebookProps> = ({
       <CiFacebook
         style={{
           stroke: "black",
-          strokeWidth: `${size}%`,
+          strokeWidth: `${size}`,
           zIndex: 1,
         }}
       />
