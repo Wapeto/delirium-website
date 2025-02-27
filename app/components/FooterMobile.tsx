@@ -9,7 +9,7 @@ import { HiOutlineMapPin } from "react-icons/hi2";
 const FooterMobile = () => {
   return (
     <footer
-      className="flex flex-col items-center justify-center gap-4 mt-4 bg-gradient-to-b from-beige via-[#6BC3DB] to-bleu w-full text-[#444343] font-titillium text-sm pt-16"
+      className="flex flex-col items-center justify-center gap-4 mt-[-2px] bg-gradient-to-b from-beige via-[#6BC3DB] to-bleu w-full text-[#444343] font-titillium text-sm pt-24"
       style={{}}
     >
       <address className="flex justify-center text-4xl w-80">
