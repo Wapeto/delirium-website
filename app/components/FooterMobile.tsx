@@ -28,7 +28,7 @@ const FooterMobile = () => {
           <PiInstagramLogo />
         </Link>
         <Link
-          href="tel:+000000000"
+          href="tel:+33388326644"
           className="border border-[#444343] rounded-lg p-2 m-auto"
         >
           <PiPhoneThin
@@ -36,7 +36,7 @@ const FooterMobile = () => {
           />
         </Link>
         <Link
-          href="mailto:oe@gmail.com"
+          href="mailto:contact@deliriumcafestrasbourg.fr"
           className="border border-[#444343] rounded-lg p-2 m-auto"
         >
           <BsEnvelope className="text-[#444343]"/>
