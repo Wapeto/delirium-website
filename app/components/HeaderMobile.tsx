@@ -46,7 +46,7 @@ const HeaderMobile = () => {
   return (
     <>
       <motion.header
-        className="bg-beige mb-3 w-screen flex flex-col items-center justify-center text-center rounded-b-[9rem] fixed top-0 z-50 left-0 overflow-hidden text-background"
+        className="bg-beige mb-3 w-screen flex flex-col items-center justify-center text-center rounded-b-[9rem] fixed top-0 z-50 left-0 overflow-hidden text-background shadow-[0px_6px_8px_3px_rgba(0,0,0,0.25)]"
         style={{
           height: headerHeight,
           borderBottomLeftRadius: borderRadius,
@@ -72,7 +72,7 @@ const HeaderMobile = () => {
           className="flex flex-col items-center"
           style={{ opacity: textOpacity }}
         >
-          <p className="text-3xl mt-10">
+          <p className="text-3xl mt-2">
             RESTEZ À JOUR <br /> GRÂCE À NOS
           </p>
           <h2
